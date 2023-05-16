@@ -1,0 +1,127 @@
+:root {
+  --black-color: #010000;
+  --white-color: #ffffff;
+  --lightgray-color: #e6e6e6;
+}
+
+.App {
+  font-size: 18px;
+  height: 100vh;
+  width: 100%;
+  background-color: #c4f4f2;
+  align-items: center;
+  font-family: system-ui,
+}
+
+.flex {
+  display: flex;
+  text-align: center;
+}
+
+.margin-40 {
+  margin: 0 40px;
+}
+.padding-20 {
+  padding: 0 50px;
+}
+
+.wrap {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+header {
+  display: grid;
+  align-items: center;
+  width: 100%;
+  background: rgba(255, 255, 255, 0);
+  height: 100px;
+  position: fixed;
+  z-index: 10;
+  align-items: center;
+}
+
+.fw-300 {
+  font-weight: 300;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.fs {
+  font-size: 1.5rem;
+}
+.fs-m {
+  font-size: 30px;
+}
+.fs-s {
+  font-size: 20px;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  justify-content: space-around;
+  display: flex;
+}
+
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 30px;
+}
+
+nav ul li a {
+  font-size: 19px;
+  text-decoration: none;
+  color: var(--white-color);
+  transition: all 0.2s;
+}
+
+nav ul li a:hover {
+  color: #67d8d2;
+}
+
+.container {
+  height: 100vh;
+  padding: 120px;
+}
+
+.container h1 {
+  text-align: center;
+  font-size: 50px;
+}
+
+.profileImage {
+  object-fit: cover;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+img {
+  width: 300px;
+  height: 500px;
+}
+
+.works,.profile {
+  margin-top: 80px;
+  margin-bottom: 60px;
+}
+
+#skill img {
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 12px;
+  margin-top: 12px;
+  height: 300px;
+}
+
+#skill button {
+  margin-bottom: 100px;
+}
