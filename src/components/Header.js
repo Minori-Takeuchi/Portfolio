@@ -16,13 +16,13 @@ const Header = () => {
               <Link to="/profile" class="fs-m fw-300 text-secondary  link-info">Profile</Link>
             </li>
             <li>
+              <Link to="/sns" class="fs-m fw-300 text-secondary  text-primary link-info">Skills</Link>
+            </li>
+            <li>
               <Link to="/sns" class="fs-m fw-300 text-secondary  text-primary link-info">Works</Link>
             </li>
             <li>
-              <Link to="/sns" class="fs-m fw-300 text-secondary  text-primary link-info">SNS</Link>
-            </li>
-            <li>
-              <Link to="/sns" class="fs-m fw-300 text-secondary  text-primary link-info">SNS</Link>
+              <Link to="/sns" class="fs-m fw-300 text-secondary  text-primary link-info">Contact</Link>
             </li>
           </ul>
         </nav>

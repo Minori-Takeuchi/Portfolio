@@ -1,5 +1,6 @@
 import './App.css';
 import Header from './components/Header';
+import Footer from './components/Footer';
 import Home from './routes/Home';
 import Profile from './routes/Profile';
 import Sns from './routes/Sns';
@@ -16,6 +17,7 @@ function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/sns" element={<Sns />} />
       </Routes>
+      <Footer className='fixed-bottom' />
     </div>
   );
 }

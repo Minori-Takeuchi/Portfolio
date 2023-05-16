@@ -18,14 +18,12 @@
   text-align: center;
 }
 
-.margin-40 {
-  margin: 0 40px;
-}
-.padding-20 {
-  padding: 0 50px;
+.margin-80 {
+  margin: 0 80px;
 }
 
 .wrap {
+  position: relative;
   width: 100%;
   height: 100vh;
   display: flex;
@@ -33,15 +31,31 @@
   align-items: center;
 }
 
+.sub-ttl {
+  position: absolute;
+  top: 38vh;
+  color: #afdcdc;
+}
+
 header {
   display: grid;
   align-items: center;
   width: 100%;
-  background: rgba(255, 255, 255, 0);
   height: 100px;
   position: fixed;
   z-index: 10;
   align-items: center;
+}
+
+footer {
+  width: 100%;
+  height: 50px;
+  background-color: #64a4a1;
+  color: #ffffff;
+}
+
+.page-section {
+  margin: 200px 0;
 }
 
 .fw-300 {
@@ -91,37 +105,75 @@ nav ul li a:hover {
   padding: 120px;
 }
 
-.container h1 {
-  text-align: center;
-  font-size: 50px;
+.profile-wrap {
+  position: relative;
+  width: 100%;
+  height: 380px;
 }
 
-.profileImage {
+.profile-img {
+  position: absolute;
+  left: 8%;
   object-fit: cover;
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
   margin-bottom: 15px;
+  opacity: 0.2;
+  animation: 3s linear infinite rotation;
+  animation-duration: 10s;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
-img {
-  width: 300px;
-  height: 500px;
+.profile-content {
+  position: absolute;
+  left: 25%;
 }
 
-.works,.profile {
+.section {
   margin-top: 80px;
   margin-bottom: 60px;
 }
 
-#skill img {
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 12px;
-  margin-top: 12px;
-  height: 300px;
+.skill-icon-list {
+  display: flex;
+  justify-content: space-around;
 }
 
-#skill button {
-  margin-bottom: 100px;
+.skill-icon {
+  width: 50px;
+  height: 50px;
+  opacity: 0.9;
+}
+
+.fadeUp {
+  animation-name: fadeUpAnime;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width:992px) {
+  .profile-img {
+      top: 20px;
+    }
+
+  .profile-content {
+      left: 0;
+    }
 }
