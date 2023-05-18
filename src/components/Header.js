@@ -1,34 +1,59 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { HashLink } from 'react-router-hash-link';
 
 const Header = () => {
   return (
     <header>
-      <div className='row'>
-        <div class="col-md-3"></div>
-        <div class="col-md-3"></div>
-        <nav className='col-md-5'>
+      <div className="row">
+        <div className="col-md-3"></div>
+        <div className="col-md-3"></div>
+        <nav className="col-md-5">
           <ul>
             <li>
-              <Link to="/" class="fs-m fw-300 text-secondary link-info">Home</Link>
+              <HashLink
+                to="/#home"
+                className="fs-m fw-300 text-secondary link-info"
+              >
+                Home
+              </HashLink>
             </li>
             <li>
-              <Link to="/profile" class="fs-m fw-300 text-secondary  link-info">Profile</Link>
+              <HashLink
+                to="/#profile"
+                className="fs-m fw-300 text-secondary  link-info"
+              >
+                Profile
+              </HashLink>
             </li>
             <li>
-              <Link to="/sns" class="fs-m fw-300 text-secondary  text-primary link-info">Skills</Link>
+              <HashLink
+                to="/#skills"
+                className="fs-m fw-300 text-secondary  text-primary link-info"
+              >
+                Skills
+              </HashLink>
             </li>
             <li>
-              <Link to="/sns" class="fs-m fw-300 text-secondary  text-primary link-info">Works</Link>
+              <HashLink
+                to="/#works"
+                className="fs-m fw-300 text-secondary  text-primary link-info"
+              >
+                Works
+              </HashLink>
             </li>
             <li>
-              <Link to="/sns" class="fs-m fw-300 text-secondary  text-primary link-info">Contact</Link>
+              <HashLink
+                to="/#contact"
+                className="fs-m fw-300 text-secondary  text-primary link-info"
+              >
+                Contact
+              </HashLink>
             </li>
           </ul>
         </nav>
       </div>
     </header>
-  )
+  );
 }
 
 export default Header

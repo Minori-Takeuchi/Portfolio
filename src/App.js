@@ -1,10 +1,13 @@
 import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import { Routes, Route } from 'react-router-dom';
 import Home from './routes/Home';
 import Profile from './routes/Profile';
-import Sns from './routes/Sns';
-import { Routes, Route } from 'react-router-dom';
+import Skills from './routes/Skills';
+import Rese from './routes/Works/Rese';
+import Share from './routes/Works/Share';
+
 
 
 function App() {
@@ -15,7 +18,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/profile" element={<Profile />} />
-        <Route path="/sns" element={<Sns />} />
+        <Route path="/skills" element={<Skills />} />
+        <Route path="/Works/rese" element={<Rese />} />
+        <Route path="/Works/share" element={<Share />} />
       </Routes>
       <Footer className='fixed-bottom' />
     </div>
