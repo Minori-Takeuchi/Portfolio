@@ -41,7 +41,16 @@ const SkillsSection = () => {
           src="/Images/Skills/mysql.svg"
           alt="MYSQL"
         />
-        <img className="skill-icon" src="/Images/Skills/aws.svg" alt="AWS" />
+        <img
+          className="skill-icon"
+          src="/Images/Skills/aws.svg"
+          alt="AWS"
+        />
+        <img
+          className="skill-icon"
+          src="/Images/Skills/netlify.svg"
+          alt="Netlify"
+        />
         <img
           className="skill-icon"
           src="/Images/Skills/docker.svg"

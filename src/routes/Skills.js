@@ -59,7 +59,11 @@ function Skills() {
             </div>
             <div className="d-flex justify-content-between align-items-center  text-secondary other-skill">
               <img src="/Images/Skills/aws.svg" alt="AWS" />
-              <p className="display-5">React</p>
+              <p className="display-5">AWS</p>
+            </div>
+            <div className="d-flex justify-content-between align-items-center  text-secondary other-skill">
+              <img src="/Images/Skills/netlify.svg" alt="Netlify" />
+              <p className="display-5">Netlify</p>
             </div>
             <div className="d-flex justify-content-between align-items-center  text-secondary other-skill">
               <img src="/Images/Skills/docker.svg" alt="Docker" />

@@ -78,6 +78,7 @@ const Portfolio = () => {
               <tr>
                 <td>
                   <p>React / JavaScript</p>
+                  <p>Netlify</p>
                 </td>
               </tr>
               <tr>
@@ -91,6 +92,11 @@ const Portfolio = () => {
                     className="skill-icon"
                     src="/Images/Skills/react.svg"
                     alt="React"
+                  />
+                  <img
+                    className="skill-icon"
+                    src="/Images/Skills/netlify.svg"
+                    alt="Netlify"
                   />
                 </td>
               </tr>

@@ -24,7 +24,7 @@ function Home() {
       <section className="page-section" id="works">
         <WorksSection />
       </section>
-      <section className="page-section" id="contact">
+      <section id="contact">
         <ContactSection />
       </section>
     </div>
