@@ -51,69 +51,23 @@ const WorksSection = () => {
         </div>
 
         <div className="col-xxl-4 col-md-6">
-          <div className="card border-light mb-5 overflow-hidden">
-            <img
-              className="card-img img-fluid shadow transition"
-              src="./Images/Works/Rese/home.png"
-              alt=""
-            />
-            <div className="card-body">
-              <h5 className="card-title display-6 text-muted fw-400">SA</h5>
-              <p className="card-text">
-                <small className="fs-s">aaaaaaaa</small>
-              </p>
+          <HashLink to="/works/portfolio/#top" style={{ textDecoration: "none" }}>
+            <div className="card border-light mb-5 overflow-hidden">
+              <img
+                className="card-img img-fluid shadow transition"
+                src="./Images/Works/Portfolio/top.png"
+                alt=""
+              />
+              <div className="card-body">
+                <h5 className="card-title display-6 text-muted fw-400">Minori-Takeuchi Portfolio</h5>
+                <p className="card-text">
+                  <small className="fs-s">私のポートフォリオサイト</small>
+                </p>
+              </div>
             </div>
-          </div>
+          </HashLink>
         </div>
-        <div className="col-xxl-4 col-md-6">
-          <div className="card border-light mb-5 overflow-hidden">
-            <img
-              className="card-img img-fluid shadow transition"
-              src="./Images/Works/Rese/home.png"
-              alt=""
-            />
-            <div className="card-body">
-              <h5 className="card-title display-6 text-muted fw-400">
-                efwegwg
-              </h5>
-              <p className="card-text">
-                <small className="fs-s">bbbbbbb</small>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="col-xxl-4 col-md-6">
-          <div className="card border-light mb-5 overflow-hidden">
-            <img
-              className="card-img img-fluid shadow transition"
-              src="./Images/Works/Rese/home.png"
-              alt=""
-            />
-            <div className="card-body">
-              <h5 className="card-title display-6 text-muted fw-400">egegew</h5>
-              <p className="card-text">
-                <small className="fs-s">cccccccc</small>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="col-xxl-4 col-md-6">
-          <div className="card border-light mb-5 overflow-hidden">
-            <img
-              className="card-img img-fluid shadow transition"
-              src="./Images/Works/Rese/home.png"
-              alt=""
-            />
-            <div className="card-body">
-              <h5 className="card-title display-6 text-muted fw-400">
-                sdasfgg
-              </h5>
-              <p className="card-text">
-                <small className="fs-s">dddddddd</small>
-              </p>
-            </div>
-          </div>
-        </div>
+
       </div>
     </div>
   );

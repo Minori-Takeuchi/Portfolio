@@ -1,13 +1,9 @@
 import React from 'react'
-import { useNavigate } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 const SkillsSection = () => {
-    const navigate = useNavigate();
-    const goSkillsPage = () => {
-      navigate("/skills");
-    };
   return (
-    <div className="skills section">
+    <div className="skills section" id='skills'>
       <div className="text-center">
         <h2 className="section-heading display-3 text-secondary">Skills</h2>
         <h6 className="section-subheading fs-m fw-300 mb-5">私にできること</h6>
@@ -34,11 +30,7 @@ const SkillsSection = () => {
           src="/Images/Skills/nuxt.svg"
           alt="NuxtJS"
         />
-        <img
-          className="skill-icon"
-          src="/Images/Skills/vue.svg"
-          alt="Vue.js"
-        />
+        <img className="skill-icon" src="/Images/Skills/vue.svg" alt="Vue.js" />
         <img
           className="skill-icon"
           src="/Images/Skills/react.svg"
@@ -49,9 +41,7 @@ const SkillsSection = () => {
           src="/Images/Skills/mysql.svg"
           alt="MYSQL"
         />
-        <img className="skill-icon"
-          src="/Images/Skills/aws.svg"
-          alt="AWS" />
+        <img className="skill-icon" src="/Images/Skills/aws.svg" alt="AWS" />
         <img
           className="skill-icon"
           src="/Images/Skills/docker.svg"
@@ -69,6 +59,11 @@ const SkillsSection = () => {
         />
         <img
           className="skill-icon"
+          src="/Images/Skills/stripe.svg"
+          alt="Stripe"
+        />
+        <img
+          className="skill-icon"
           src="/Images/Skills/github.svg"
           alt="GitHub"
         />
@@ -80,13 +75,11 @@ const SkillsSection = () => {
         <p className="skills-content fs-s">
           日々のスキルアップを目標とし、お役に立てることを心掛けています。
         </p>
-        <button
-          type="button"
-          className="btn btn-outline-secondary"
-          onClick={goSkillsPage}
-        >
-          Skills詳細はこちら
-        </button>
+        <HashLink to="/skills/#top">
+          <button type="button" className="btn btn-outline-secondary">
+            Skills詳細はこちら
+          </button>
+        </HashLink>
       </div>
     </div>
   );

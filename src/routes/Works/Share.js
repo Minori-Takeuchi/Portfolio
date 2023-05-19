@@ -98,7 +98,7 @@ const Share = () => {
             <tbody>
               <tr>
                 <td>
-                  <p>日々感じたことをその場で発信し、人と繋がるためのWebアプリケーションです。簡単につぶやくことができるよう、投稿・コメントは120文字までに設定しています。FireBase Authenticationによるメール・パスワード認証を取り入れています。</p>
+                  <p>日々感じたことをその場で発信し、人と繋がるためのWebアプリケーションです。簡単につぶやくことができるよう、投稿・コメントは120文字までに設定しています。FireBase Authenticationによるメール・パスワード認証を取り入れています。またVue.jsプラグインのVeeValidateを利用したバリデーションを取り入れています。</p>
                 </td>
               </tr>
             </tbody>
@@ -132,13 +132,18 @@ const Share = () => {
             <tbody>
               <tr>
                 <td>
-                  <p>NuxtJS</p>
+                  <p>NuxtJS / JavaScript</p>
                   <p>Laravel</p>
                   <p>Firebase Authentication</p>
                 </td>
               </tr>
               <tr>
                 <td>
+                  <img
+                    className="skill-icon"
+                    src="/Images/Skills/javascript.svg"
+                    alt="JavaScript"
+                  />
                   <img
                     className="skill-icon"
                     src="/Images/Skills/nuxt.svg"

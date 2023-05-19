@@ -120,7 +120,7 @@ nav ul li a:hover {
   object-fit: cover;
   margin-bottom: 15px;
   opacity: 0.2;
-  animation: 3s linear infinite rotation;
+  animation:linear infinite rotation;
   animation-duration: 10s;
 }
 @keyframes rotation {
@@ -139,7 +139,7 @@ nav ul li a:hover {
 }
 
 .section {
-  margin: 80px 50px 40px 50px;
+  padding: 80px 50px 40px 50px;
 }
 
 .skill-icon-list {
@@ -175,6 +175,10 @@ nav ul li a:hover {
 
 .transition {
   transition: transform 0.5s ease-in-out;
+}
+
+.page-section .contact {
+  background-color: #c4f4f2;
 }
 
 .contact-icon {
@@ -221,6 +225,60 @@ nav ul li a:hover {
   margin: 0 50px 50px 50px;
 }
 
+.profile {
+  padding: 120px 20px;
+  position: relative;
+}
+
+.profile-img-s {
+  position: absolute;
+  width: 150px;
+  right: 150px;
+  bottom: 250px;
+  object-fit: cover;
+  margin-bottom: 15px;
+  opacity: 0.5;
+  transform: rotate(45deg);
+}
+.profile-img-m {
+  position: absolute;
+  width: 300px;
+  right: 150px;
+  bottom: 250px;
+  object-fit: cover;
+  margin-bottom: 15px;
+  opacity: 0.2;
+  transform: rotate(10deg);
+}
+
+.skills {
+  padding: 120px 20px;
+}
+
+.most-skill,
+.other-skill {
+  margin: 20px;
+}
+
+.most-skill img {
+  width: 60px;
+  margin-right: 10px;
+}
+
+.other {
+  margin: 100px 0;
+}
+
+.other h5 {
+  margin-top: 50px;
+}
+
+.other-skill img{
+  width: 50px;
+  margin-right: 10px;
+}
+
+
 Table tbody tr td h5 {
   padding: 0 20px;
 }
@@ -231,11 +289,13 @@ Table tbody tr td img {
   margin-left: 5px;
   margin-right: 25px;
 }
+
+
 .fadeUp {
   animation-name: fadeUpAnime;
   animation-duration: 3s;
   animation-fill-mode: forwards;
-  opacity: 0;
+  opacity: 0.7;
 }
 
 @keyframes fadeUpAnime {

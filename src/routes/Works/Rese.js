@@ -97,7 +97,7 @@ const Rese = () => {
               <td>
                 <p>
                   個人開発の飲食店予約サービスです。初めてDocker,AWSを使用したプロジェクトになります。直感的な操作ができるようUIデザインを目指しました。サーバー開発環境と本番環境の二つを用意し、開発環境用はCircle
-                  CIによる自動テスト・自動デプロイを実装しました。
+                  CIによる自動テスト・自動デプロイを実装しました。Stripeによる決済機能もあります。
                 </p>
               </td>
             </tr>
@@ -139,6 +139,7 @@ const Rese = () => {
                 <p>予約QRコード表示</p>
                 <p>来店後の店舗評価機能</p>
                 <p>予約リマインダーメール機能</p>
+                <p>予約事前決済機能</p>
               </td>
             </tr>
             <tr>
@@ -166,16 +167,22 @@ const Rese = () => {
           <tbody>
             <tr>
               <td>
-                <p>NuxtJS</p>
+                <p>NuxtJS / JavaScript</p>
                 <p>Laravel</p>
                 <p>Docker / Docker Compose</p>
                 <p>AWS（EC2,RDS,S3）</p>
                 <p>Firebase Authentication</p>
+                <p>Stripe</p>
                 <p>Circle CI</p>
               </td>
             </tr>
             <tr>
               <td>
+                <img
+                  className="skill-icon"
+                  src="/Images/Skills/javascript.svg"
+                  alt="JavaScript"
+                />
                 <img
                   className="skill-icon"
                   src="/Images/Skills/nuxt.svg"
@@ -200,6 +207,11 @@ const Rese = () => {
                   className="skill-icon"
                   src="/Images/Skills/firebase.svg"
                   alt="Firebase"
+                />
+                <img
+                  className="skill-icon"
+                  src="/Images/Skills/stripe.svg"
+                  alt="Stripe"
                 />
                 <img
                   className="skill-icon"
