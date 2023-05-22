@@ -28,7 +28,7 @@ const ProfileSection = () => {
           </div>
         </div>
         <div className=" text-center">
-          <HashLink to="/profile/#top">
+          <HashLink to="/profile#top">
             <button type="button" className="btn btn-outline-secondary">
               Profile詳細はこちら
             </button>

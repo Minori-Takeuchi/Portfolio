@@ -16,7 +16,7 @@ const Profile = () => {
     }, []);
   return (
     <div className="profile">
-      <div className="d-flex justify-content-center mb-5">
+      <div className="d-flex justify-content-center mb-5" id="top">
         <Table responsive borderless>
           <thead>
             <tr>
@@ -35,7 +35,8 @@ const Profile = () => {
               <td>
                 <h3 className="mb-5 fw-400">Minori Takeuchi</h3>
                 <p className="mb-4">
-                  はじめまして！富山県出身、石川県在住のWebエンジニアです。子供の成長に合わせて働き方を変えたいと思いエンジニアの道を選びました。新しいことに挑戦するのが好きです。<br />
+                  はじめまして！富山県出身、石川県在住のWebエンジニアです。子供の成長に合わせて働き方を変えたいと思いエンジニアの道を選びました。新しいことに挑戦するのが好きです。
+                  <br />
                   お仕事をいただけることに感謝し、報連相・迅速なレスポンス・コミュニケーションを心掛けてプロジェクトに取り組みます。
                 </p>
                 <h5>性格</h5>

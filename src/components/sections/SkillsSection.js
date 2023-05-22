@@ -80,7 +80,7 @@ const SkillsSection = () => {
         <p className="skills-content fs-s">
           日々のスキルアップを目標とし、お役に立てることを心掛けています。
         </p>
-        <HashLink to="/skills/#top">
+        <HashLink to="/skills#top">
           <button type="button" className="btn btn-outline-secondary">
             Skills詳細はこちら
           </button>

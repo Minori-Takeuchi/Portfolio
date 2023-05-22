@@ -15,13 +15,13 @@ function Skills() {
   }, []);
   return (
     <div className="skills">
-      <div className="text-center">
+      <div className="text-center" id="top">
         <h2 className="section-heading display-3 text-secondary">Skills</h2>
         <h6 className="section-subheading fs-m fw-300 skills-content">
           使用言語・フレームワーク・ツールなど
         </h6>
         <h5 className="fs-m fw-400">得意なスキル</h5>
-        <div className="d-flex justify-content-center align-items-center text-secondary most-skill-list">
+        <div className="d-flex justify-content-center align-items-center text-secondary most-skill-list flex-wrap">
           <div className="d-flex justify-content-between align-items-center most-skill">
             <img src="/Images/Skills/laravel.svg" alt="Laravel" />
             <p className="display-3">Laravel</p>
@@ -66,7 +66,7 @@ function Skills() {
           <div className="d-flex justify-content-center align-items-center flex-wrap other-skill-list">
             <div className="d-flex justify-content-between align-items-center  text-secondary other-skill">
               <img src="/Images/Skills/mysql.svg" alt="Mysql.js" />
-              <p className="display-5">Vue.js</p>
+              <p className="display-5">Mysql</p>
             </div>
             <div className="d-flex justify-content-between align-items-center  text-secondary other-skill">
               <img src="/Images/Skills/aws.svg" alt="AWS" />
