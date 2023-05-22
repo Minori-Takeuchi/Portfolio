@@ -1,13 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { HashLink } from "react-router-hash-link";
 import Table from "react-bootstrap/Table";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
 
 const Portfolio = () => {
+  useEffect(() => {
+    const scrollToTop = () => {
+      const scrollOptions = {
+        top: 0,
+        behavior: "smooth",
+      };
+      window.scrollTo(scrollOptions);
+    };
+
+    scrollToTop();
+  }, []);
   return (
     <div>
-      <div className="work container" id="top">
+      <div className="work container">
         {/* タイトルと画像 */}
         <div className="work-top">
           <div className="text-center work-ttl">

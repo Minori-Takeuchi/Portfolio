@@ -1,5 +1,5 @@
 import React from "react";
-import { HashLink } from "react-router-hash-link";
+import { Link } from "react-router-dom";
 
 const WorksSection = () => {
   return (
@@ -13,7 +13,7 @@ const WorksSection = () => {
 
       <div className="row">
         <div className="col-xxl-4 col-md-6">
-          <HashLink to="/works/rese/#top" style={{ textDecoration: "none" }}>
+          <Link to="/works/rese" style={{ textDecoration: "none" }}>
             <div className="card border-light mb-5 overflow-hidden" id="rese">
               <img
                 className="card-img img-fluid shadow transition"
@@ -27,11 +27,11 @@ const WorksSection = () => {
                 </p>
               </div>
             </div>
-          </HashLink>
+          </Link>
         </div>
 
         <div className="col-xxl-4 col-md-6">
-          <HashLink to="/works/share/#top" style={{ textDecoration: "none" }}>
+          <Link to="/works/share" style={{ textDecoration: "none" }}>
             <div className="card border-light mb-5 overflow-hidden">
               <img
                 className="card-img img-fluid shadow transition"
@@ -47,11 +47,11 @@ const WorksSection = () => {
                 </p>
               </div>
             </div>
-          </HashLink>
+          </Link>
         </div>
 
         <div className="col-xxl-4 col-md-6">
-          <HashLink to="/works/portfolio/#top" style={{ textDecoration: "none" }}>
+          <Link to="/works/portfolio" style={{ textDecoration: "none" }}>
             <div className="card border-light mb-5 overflow-hidden">
               <img
                 className="card-img img-fluid shadow transition"
@@ -65,7 +65,7 @@ const WorksSection = () => {
                 </p>
               </div>
             </div>
-          </HashLink>
+          </Link>
         </div>
 
       </div>

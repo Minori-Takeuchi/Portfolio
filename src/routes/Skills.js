@@ -1,9 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { HashLink } from "react-router-hash-link";
 
 function Skills() {
+  useEffect(() => {
+    const scrollToTop = () => {
+      const scrollOptions = {
+        top: 0,
+        behavior: "smooth",
+      };
+      window.scrollTo(scrollOptions);
+    };
+
+    scrollToTop();
+  }, []);
   return (
-    <div className="skills" id="top">
+    <div className="skills">
       <div className="text-center">
         <h2 className="section-heading display-3 text-secondary">Skills</h2>
         <h6 className="section-subheading fs-m fw-300 skills-content">

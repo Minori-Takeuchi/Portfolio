@@ -15,11 +15,6 @@
   background-color: #c4f4f2;
 }
 
-.flex {
-  display: flex;
-  text-align: center;
-}
-
 .padding-80 {
   padding: 0 80px;
 }
@@ -52,6 +47,10 @@ header {
   position: fixed;
   z-index: 10;
   align-items: center;
+}
+
+.nav-link {
+  margin-right: 20px;
 }
 
 footer {
@@ -233,7 +232,7 @@ nav ul li a:hover {
 }
 
 .profile {
-  padding: 120px 20px;
+  padding: 120px 80px;
   position: relative;
 }
 
@@ -326,4 +325,24 @@ Table tbody tr td img {
   .work-ttl {
     margin-bottom: 150px;
   }
+
+  .profile {
+    padding: 120px 30px;
+  }
+
+  .nav-link {
+    background-color: #ffffff6c;
+    margin-right: 0;
+  }
+
+  .nav-link:first-child {
+    margin-top: 10px;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .nav-link:last-child {
+    border-radius: 0 0 10px 10px;
+  }
+
+
 }

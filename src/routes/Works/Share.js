@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { HashLink } from "react-router-hash-link";
 import Carousel from "react-bootstrap/Carousel";
 import Table from "react-bootstrap/Table";
@@ -6,9 +6,20 @@ import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
 
 const Share = () => {
+  useEffect(() => {
+    const scrollToTop = () => {
+      const scrollOptions = {
+        top: 0,
+        behavior: "smooth",
+      };
+      window.scrollTo(scrollOptions);
+    };
+
+    scrollToTop();
+  }, []);
   return (
     <div>
-      <div className="work container" id="top">
+      <div className="work container">
         {/* タイトルとカルーセル */}
         <div className="work-top">
           <div className="text-center work-ttl">
@@ -98,7 +109,10 @@ const Share = () => {
             <tbody>
               <tr>
                 <td>
-                  <p>日々感じたことをその場で発信し、人と繋がるためのWebアプリケーションです。簡単につぶやくことができるよう、投稿・コメントは120文字までに設定しています。FireBase Authenticationによるメール・パスワード認証を取り入れています。またVue.jsプラグインのVeeValidateを利用したバリデーションを取り入れています。</p>
+                  <p>
+                    日々感じたことをその場で発信し、人と繋がるためのWebアプリケーションです。簡単につぶやくことができるよう、投稿・コメントは120文字までに設定しています。FireBase
+                    Authenticationによるメール・パスワード認証を取り入れています。またVue.jsプラグインのVeeValidateを利用したバリデーションを取り入れています。
+                  </p>
                 </td>
               </tr>
             </tbody>

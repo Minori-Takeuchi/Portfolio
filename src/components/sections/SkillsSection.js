@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 import { HashLink } from "react-router-hash-link";
 
 const SkillsSection = () => {
   return (
-    <div className="skills section" id='skills'>
+    <div className="skills section" id="skills">
       <div className="text-center">
         <h2 className="section-heading display-3 text-secondary">Skills</h2>
         <h6 className="section-subheading fs-m fw-300 mb-5">私にできること</h6>
@@ -41,11 +41,7 @@ const SkillsSection = () => {
           src="/Images/Skills/mysql.svg"
           alt="MYSQL"
         />
-        <img
-          className="skill-icon"
-          src="/Images/Skills/aws.svg"
-          alt="AWS"
-        />
+        <img className="skill-icon" src="/Images/Skills/aws.svg" alt="AWS" />
         <img
           className="skill-icon"
           src="/Images/Skills/netlify.svg"
@@ -92,6 +88,6 @@ const SkillsSection = () => {
       </div>
     </div>
   );
-}
+};
 
-export default SkillsSection
+export default SkillsSection;
