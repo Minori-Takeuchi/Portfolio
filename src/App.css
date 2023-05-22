@@ -107,19 +107,28 @@ nav ul li a:hover {
   color: #67d8d2;
 }
 
+.profile-section {
+  padding: 0 10%;
+}
+
 .profile-wrap {
-  position: relative;
   width: 100%;
-  height: 380px;
+  position: relative;
+  margin: 100px 0;
 }
 
 .profile-img {
   position: absolute;
-  left: 8%;
+  top: 100px;
+  left: 50px;
+  width: 300px;
+  height: 300px;
   object-fit: cover;
-  margin-bottom: 15px;
   opacity: 0.2;
-  animation:linear infinite rotation;
+  background-image: url("/public/starfishbig.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  animation: linear infinite rotation;
   animation-duration: 10s;
 }
 @keyframes rotation {
@@ -132,9 +141,8 @@ nav ul li a:hover {
 }
 
 .profile-content {
-  position: absolute;
-  left: 25%;
-  margin-right: 80px;
+  width: 80%;
+  margin-left: auto;
 }
 
 .section {
@@ -272,11 +280,10 @@ nav ul li a:hover {
   margin-top: 50px;
 }
 
-.other-skill img{
+.other-skill img {
   width: 50px;
   margin-right: 10px;
 }
-
 
 Table tbody tr td h5 {
   padding: 0 20px;
@@ -288,7 +295,6 @@ Table tbody tr td img {
   margin-left: 5px;
   margin-right: 25px;
 }
-
 
 .fadeUp {
   animation-name: fadeUpAnime;
@@ -309,13 +315,12 @@ Table tbody tr td img {
 }
 
 @media screen and (max-width: 992px) {
-  .profile-img {
-    top: 20px;
+  .profile-section {
+    padding: 0 20px;
   }
 
   .profile-content {
-    left: 0;
-    margin: 0 35px;
+    margin: 0 auto;
   }
 
   .work-ttl {
