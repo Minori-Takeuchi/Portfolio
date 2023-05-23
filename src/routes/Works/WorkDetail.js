@@ -80,7 +80,7 @@ const WorkDetail = () => {
                       <img
                         disabled
                         className="work-git-icon"
-                        src="/Images/Skills/github.svg"
+                        src="/github.svg"
                         alt="GitHub"
                       />
                     </a>

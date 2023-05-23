@@ -28,11 +28,11 @@
   align-items: center;
 }
 
-.ttl {
+.home-ttl {
   margin-left: 5%;
 }
 
-.sub-ttl {
+.home-sub-ttl {
   position: absolute;
   top: 38vh;
   color: #afdcdc;
@@ -220,7 +220,7 @@ footer {
   bottom: 250px;
   object-fit: cover;
   margin-bottom: 15px;
-  opacity: 0.5;
+  opacity: 0.4;
   transform: rotate(45deg);
 }
 .profile-img-m {
@@ -290,6 +290,10 @@ Table tbody tr td img {
 }
 
 @media screen and (max-width: 992px) {
+  .fs-m {
+    font-size: 24px;
+  }
+
   .profile-section {
     padding: 0 20px;
   }
@@ -298,12 +302,34 @@ Table tbody tr td img {
     margin: 0 auto;
   }
 
+  .skills {
+    padding: 0 20px;
+  }
+
+  .skill-icon-list {
+    margin: 100px 20px;
+  }
+
+  .skill-icon {
+    margin-bottom: 10px;
+  }
+
   .work-ttl {
     margin-bottom: 150px;
   }
 
   .profile {
     padding: 120px 30px;
+  }
+
+  .profile-img-s,
+  .profile-img-m {
+    right: 50px;
+    bottom: 350px;
+  }
+
+  Table tbody tr td p {
+    padding: 0;
   }
 
   .nav-link {
@@ -320,5 +346,7 @@ Table tbody tr td img {
     border-radius: 0 0 10px 10px;
   }
 
-
+  .work-content {
+    margin: 0 0 50px 0;
+  }
 }

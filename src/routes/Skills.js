@@ -24,7 +24,6 @@ function Skills() {
             },
           }
         );
-        console.log(response.data.contents);
         setSkillsData(response.data.contents);
       } catch (error) {
         console.log(error);

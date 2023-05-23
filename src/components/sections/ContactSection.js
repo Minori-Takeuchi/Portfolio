@@ -10,8 +10,7 @@ const ContactSection = () => {
         </h6>
         <div className="contact-text">
           <p className="fs-s">
-            ご連絡はメールをご利用ください。
-          </p>
+            ご連絡はメールにてお願いいたします。</p>
           <div className="d-flex justify-content-center">
             <p className="fs-s text-secondary">email：</p>
             <a className="fs-s text-secondary" href="mailto:address">

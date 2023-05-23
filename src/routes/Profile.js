@@ -24,7 +24,7 @@ const Profile = () => {
                 <h2 className="display-5 text-center text-secondary">
                   Profile
                 </h2>
-                <h3 className="fs-m text-center text-secondary fw-300 mb-5">
+                <h3 className="profile-sub-ttl text-center text-secondary fw-300 mb-5">
                   ご覧いただきありがとうございます！
                 </h3>
               </th>

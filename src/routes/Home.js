@@ -9,9 +9,9 @@ function Home() {
   return (
     <div className="home" id="home">
       <div className="home-top">
-        <p className="display-6 text-xl-5 sub-ttl">Thank you for visiting.</p>
+        <p className="display-6 text-xl-5 home-sub-ttl">Thank you for visiting.</p>
         <div className="wrap">
-          <h2 className="ttl display-2 text-secondary text-xl-5 fadeUp">
+          <h2 className="home-ttl display-2 text-secondary text-xl-5 fadeUp">
             Minori-Takeuchi Portfolio
           </h2>
         </div>
