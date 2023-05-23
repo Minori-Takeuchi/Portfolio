@@ -4,6 +4,7 @@ import ProfileSection from "../components/sections/ProfileSection";
 import SkillsSection from "../components/sections/SkillsSection";
 import ContactSection from "../components/sections/ContactSection";
 
+
 function Home() {
   return (
     <div className="home" id="home">

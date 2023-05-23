@@ -261,11 +261,10 @@ footer {
   margin-right: 10px;
 }
 
-Table tbody tr td h5 {
-  padding: 0 20px;
-}
 Table tbody tr td p {
   padding: 0 25px;
+  font-size: 20px;
+  font-weight: 400;
 }
 Table tbody tr td img {
   margin-left: 5px;

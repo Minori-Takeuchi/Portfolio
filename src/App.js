@@ -5,26 +5,21 @@ import { Routes, Route } from 'react-router-dom';
 import Home from './routes/Home';
 import Profile from './routes/Profile';
 import Skills from './routes/Skills';
-import Rese from './routes/Works/Rese';
-import Share from './routes/Works/Share';
-import Portfolio from './routes/Works/Portfolio';
+import WorkDetail from './routes/Works/WorkDetail';
 
 
 
 function App() {
   return (
     <div className="App">
-
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/skills" element={<Skills />} />
-        <Route path="/Works/rese" element={<Rese />} />
-        <Route path="/Works/share" element={<Share />} />
-        <Route path="/Works/portfolio" element={<Portfolio />} />
+        <Route path="/works/:id" element={<WorkDetail />} />
       </Routes>
-      <Footer className='fixed-bottom' />
+      <Footer className="fixed-bottom" />
     </div>
   );
 }

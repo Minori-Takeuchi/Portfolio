@@ -1,7 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import api from "../../axios";
 import { HashLink } from "react-router-hash-link";
 
 const SkillsSection = () => {
+  const [skills, setSkillsData] = useState([]);
+  useEffect(() => {
+    const getSkillsData = async () => {
+      try {
+        const response = await api.get("/skills?fields=id,img&limit=30", {
+          headers: {
+            "X-MICROCMS-API-KEY": process.env.REACT_APP_X_MICROCMS_API_KEY,
+          },
+        });
+        setSkillsData(response.data.contents);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    getSkillsData();
+  }, []);
+
   return (
     <div className="skills section" id="skills">
       <div className="text-center">
@@ -9,69 +27,18 @@ const SkillsSection = () => {
         <h6 className="section-subheading fs-m fw-300 mb-5">私にできること</h6>
       </div>
       <div className="skill-icon-list mb-5">
-        <img
-          className="skill-icon"
-          src="/Images/Skills/html.svg"
-          alt="HTML/CSS"
-        />
-        <img className="skill-icon" src="./Images/Skills/php.svg" alt="PHP" />
-        <img
-          className="skill-icon"
-          src="/Images/Skills/javascript.svg"
-          alt="JavaScript"
-        />
-        <img
-          className="skill-icon"
-          src="/Images/Skills/laravel.svg"
-          alt="Laravel"
-        />
-        <img
-          className="skill-icon"
-          src="/Images/Skills/nuxt.svg"
-          alt="NuxtJS"
-        />
-        <img className="skill-icon" src="/Images/Skills/vue.svg" alt="Vue.js" />
-        <img
-          className="skill-icon"
-          src="/Images/Skills/react.svg"
-          alt="React"
-        />
-        <img
-          className="skill-icon"
-          src="/Images/Skills/mysql.svg"
-          alt="MYSQL"
-        />
-        <img className="skill-icon" src="/Images/Skills/aws.svg" alt="AWS" />
-        <img
-          className="skill-icon"
-          src="/Images/Skills/netlify.svg"
-          alt="Netlify"
-        />
-        <img
-          className="skill-icon"
-          src="/Images/Skills/docker.svg"
-          alt="Docker"
-        />
-        <img
-          className="skill-icon"
-          src="/Images/Skills/circleci.svg"
-          alt="CircleCI"
-        />
-        <img
-          className="skill-icon"
-          src="/Images/Skills/firebase.svg"
-          alt="Firebase"
-        />
-        <img
-          className="skill-icon"
-          src="/Images/Skills/stripe.svg"
-          alt="Stripe"
-        />
-        <img
-          className="skill-icon"
-          src="/Images/Skills/github.svg"
-          alt="GitHub"
-        />
+        {skills.length > 0 ? (
+          skills.map((skill) => (
+            <img
+              key={skill.id}
+              src={skill.img.url}
+              alt={skill.skill_name}
+              className="skill-icon"
+            />
+          ))
+        ) : (
+          <p>Loading...</p>
+        )}
       </div>
       <div className="text-center">
         <p className="fs-s">

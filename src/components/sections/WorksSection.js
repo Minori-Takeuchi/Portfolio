@@ -1,7 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import api from "../../axios";
 
 const WorksSection = () => {
+  const [works, setWorksData] = useState([]);
+  useEffect(() => {
+    const getWorksData = async () => {
+      try {
+        const response = await api.get("/works", {
+          headers: {
+            "X-MICROCMS-API-KEY": process.env.REACT_APP_X_MICROCMS_API_KEY,
+          },
+        });
+        setWorksData(response.data.contents);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    getWorksData();
+  }, []);
   return (
     <div className="works section">
       <div className="text-center">
@@ -12,62 +30,31 @@ const WorksSection = () => {
       </div>
 
       <div className="row">
-        <div className="col-xxl-4 col-md-6">
-          <Link to="/works/rese" style={{ textDecoration: "none" }}>
-            <div className="card border-light mb-5 overflow-hidden" id="rese">
-              <img
-                className="card-img img-fluid shadow transition"
-                src="./Images/Works/Rese/home.png"
-                alt="Rese -飲食店予約サイト-"
-              />
-              <div className="card-body">
-                <h5 className="card-title display-6 text-muted fw-400">Rese</h5>
-                <p className="card-text">
-                  <small className="fs-s">飲食店予約サービス</small>
-                </p>
-              </div>
+        {works.length > 0 ? (
+          works.map((work) => (
+            <div className="col-xxl-4 col-md-6" key={work.id}>
+              <Link to={`/works/${work.id}`} style={{ textDecoration: "none" }}>
+                <div className="card border-light mb-5 overflow-hidden">
+                  <img
+                    className="card-img img-fluid shadow transition"
+                    src={work.img[0].url}
+                    alt="Rese -飲食店予約サイト-"
+                  />
+                  <div className="card-body">
+                    <h5 className="card-title display-6 text-muted fw-400">
+                      {work.title}
+                    </h5>
+                    <p className="card-text">
+                      <small className="fs-s">{work.sub_title}</small>
+                    </p>
+                  </div>
+                </div>
+              </Link>
             </div>
-          </Link>
-        </div>
-
-        <div className="col-xxl-4 col-md-6">
-          <Link to="/works/share" style={{ textDecoration: "none" }}>
-            <div className="card border-light mb-5 overflow-hidden">
-              <img
-                className="card-img img-fluid shadow transition"
-                src="./Images/Works/Share/home.png"
-                alt="SHARE -SNSアプリ-"
-              />
-              <div className="card-body">
-                <h5 className="card-title display-6 text-muted fw-400">
-                  SHARE
-                </h5>
-                <p className="card-text">
-                  <small className="fs-s">SNSアプリケーション</small>
-                </p>
-              </div>
-            </div>
-          </Link>
-        </div>
-
-        <div className="col-xxl-4 col-md-6">
-          <Link to="/works/portfolio" style={{ textDecoration: "none" }}>
-            <div className="card border-light mb-5 overflow-hidden">
-              <img
-                className="card-img img-fluid shadow transition"
-                src="./Images/Works/Portfolio/top.png"
-                alt=""
-              />
-              <div className="card-body">
-                <h5 className="card-title display-6 text-muted fw-400">Minori-Takeuchi Portfolio</h5>
-                <p className="card-text">
-                  <small className="fs-s">私のポートフォリオサイト</small>
-                </p>
-              </div>
-            </div>
-          </Link>
-        </div>
-
+          ))
+        ) : (
+          <p>Loading...</p>
+        )}
       </div>
     </div>
   );

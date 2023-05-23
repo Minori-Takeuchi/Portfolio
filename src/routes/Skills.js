@@ -1,7 +1,9 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import api from "../axios";
 import { HashLink } from "react-router-hash-link";
 
 function Skills() {
+  const [skills, setSkillsData] = useState([]);
   useEffect(() => {
     const scrollToTop = () => {
       const scrollOptions = {
@@ -10,9 +12,27 @@ function Skills() {
       };
       window.scrollTo(scrollOptions);
     };
-
     scrollToTop();
+
+    const getSkillsData = async () => {
+      try {
+        const response = await api.get(
+          "/skills?fields=id,img,skill_name,type&limit=30",
+          {
+            headers: {
+              "X-MICROCMS-API-KEY": process.env.REACT_APP_X_MICROCMS_API_KEY,
+            },
+          }
+        );
+        console.log(response.data.contents);
+        setSkillsData(response.data.contents);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    getSkillsData();
   }, []);
+
   return (
     <div className="skills">
       <div className="text-center" id="top">
@@ -21,15 +41,25 @@ function Skills() {
           使用言語・フレームワーク・ツールなど
         </h6>
         <h5 className="fs-m fw-400">得意なスキル</h5>
+
         <div className="d-flex justify-content-center align-items-center text-secondary most-skill-list flex-wrap">
-          <div className="d-flex justify-content-between align-items-center most-skill">
-            <img src="/Images/Skills/laravel.svg" alt="Laravel" />
-            <p className="display-3">Laravel</p>
-          </div>
-          <div className="d-flex justify-content-between align-items-center most-skill">
-            <img src="/Images/Skills/nuxt.svg" alt="Nuxt.js" />
-            <p className="display-3">Nuxt.js</p>
-          </div>
+          {skills.length > 0 ? (
+            skills
+              .filter((skill) => skill.type === 2)
+              .slice(0, 2)
+              .map((skill) => (
+                <div className="d-flex justify-content-between align-items-center most-skill">
+                  <img
+                    key={skill.id}
+                    src={skill.img.url}
+                    alt={skill.skill_name}
+                  />
+                  <p className="display-3">{skill.skill_name}</p>
+                </div>
+              ))
+          ) : (
+            <p>Loading...</p>
+          )}
         </div>
         <p className="fs-s">
           Laravelをバックエンド、Nuxt.jsをフロントエンドとしたWebアプリケーションの開発を得意としています。
@@ -37,65 +67,62 @@ function Skills() {
 
         <div className="other">
           <h5 className="fs-m fw-400">言語</h5>
-          <div className="d-flex justify-content-center align-items-center  text-secondary flex-wrap other-skill-list">
-            <div className="d-flex justify-content-between align-items-center  text-secondary other-skill">
-              <img src="/Images/Skills/html.svg" alt="HTML/CSS" />
-              <p className="display-5">HTML/CSS</p>
-            </div>
-            <div className="d-flex justify-content-between align-items-center  text-secondary other-skill">
-              <img src="/Images/Skills/php.svg" alt="PHP" />
-              <p className="display-5">PHP</p>
-            </div>
-            <div className="d-flex justify-content-between align-items-center  text-secondary other-skill">
-              <img src="/Images/Skills/javascript.svg" alt="JavaScript" />
-              <p className="display-5">JavaScript</p>
-            </div>
+          <div className="d-flex justify-content-center align-items-center  text-secondary flex-wrap">
+            {skills.length > 0 ? (
+              skills
+                .filter((skill) => skill.type === 1)
+                .map((skill) => (
+                  <div className="d-flex justify-content-between align-items-center text-secondary other-skill">
+                    <img
+                      key={skill.id}
+                      src={skill.img.url}
+                      alt={skill.skill_name}
+                    />
+                    <p className="display-5">{skill.skill_name}</p>
+                  </div>
+                ))
+            ) : (
+              <p>Loading...</p>
+            )}
           </div>
           <h5 className="fs-m fw-400">フレームワーク</h5>
-          <div className="d-flex justify-content-center align-items-center  text-secondary other-skill-list">
-            <div className="d-flex justify-content-between align-items-center other-skill">
-              <img src="/Images/Skills/vue.svg" alt="Vue.js" />
-              <p className="display-5">Vue.js</p>
-            </div>
-            <div className="d-flex justify-content-between align-items-center other-skill">
-              <img src="/Images/Skills/react.svg" alt="React" />
-              <p className="display-5">React</p>
-            </div>
+          <div className="d-flex justify-content-center align-items-center  text-secondary flex-wrap">
+            {skills.length > 0 ? (
+              skills
+                .filter((skill) => skill.type === 2)
+                .slice(2)
+                .map((skill) => (
+                  <div className="d-flex justify-content-between align-items-center text-secondary other-skill">
+                    <img
+                      key={skill.id}
+                      src={skill.img.url}
+                      alt={skill.skill_name}
+                    />
+                    <p className="display-5">{skill.skill_name}</p>
+                  </div>
+                ))
+            ) : (
+              <p>Loading...</p>
+            )}
           </div>
           <h5 className="fs-m fw-400">データベース・ツール</h5>
-          <div className="d-flex justify-content-center align-items-center flex-wrap other-skill-list">
-            <div className="d-flex justify-content-between align-items-center  text-secondary other-skill">
-              <img src="/Images/Skills/mysql.svg" alt="Mysql.js" />
-              <p className="display-5">Mysql</p>
-            </div>
-            <div className="d-flex justify-content-between align-items-center  text-secondary other-skill">
-              <img src="/Images/Skills/aws.svg" alt="AWS" />
-              <p className="display-5">AWS</p>
-            </div>
-            <div className="d-flex justify-content-between align-items-center  text-secondary other-skill">
-              <img src="/Images/Skills/netlify.svg" alt="Netlify" />
-              <p className="display-5">Netlify</p>
-            </div>
-            <div className="d-flex justify-content-between align-items-center  text-secondary other-skill">
-              <img src="/Images/Skills/docker.svg" alt="Docker" />
-              <p className="display-5">Docker</p>
-            </div>
-            <div className="d-flex justify-content-between align-items-center  text-secondary other-skill">
-              <img src="/Images/Skills/firebase.svg" alt="Firebase" />
-              <p className="display-5">Firebase</p>
-            </div>
-            <div className="d-flex justify-content-between align-items-center  text-secondary other-skill">
-              <img src="/Images/Skills/circleci.svg" alt="Circle CI" />
-              <p className="display-5">Circle CI</p>
-            </div>
-            <div className="d-flex justify-content-between align-items-center  text-secondary other-skill">
-              <img src="/Images/Skills/stripe.svg" alt="Stripe" />
-              <p className="display-5">Stripe</p>
-            </div>
-            <div className="d-flex justify-content-between align-items-center  text-secondary other-skill">
-              <img src="/Images/Skills/github.svg" alt="GitHub" />
-              <p className="display-5">GitHub</p>
-            </div>
+          <div className="d-flex justify-content-center align-items-center  text-secondary flex-wrap">
+            {skills.length > 0 ? (
+              skills
+                .filter((skill) => skill.type === 3)
+                .map((skill) => (
+                  <div className="d-flex justify-content-between align-items-center text-secondary other-skill">
+                    <img
+                      key={skill.id}
+                      src={skill.img.url}
+                      alt={skill.skill_name}
+                    />
+                    <p className="display-5">{skill.skill_name}</p>
+                  </div>
+                ))
+            ) : (
+              <p>Loading...</p>
+            )}
           </div>
         </div>
       </div>
