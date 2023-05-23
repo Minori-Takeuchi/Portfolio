@@ -10,7 +10,7 @@ const ContactSection = () => {
         </h6>
         <div className="contact-text">
           <p className="fs-s">
-            ご連絡はメールをご利用ください。3営業日以内にご返信いたします。
+            ご連絡はメールをご利用ください。
           </p>
           <div className="d-flex justify-content-center">
             <p className="fs-s text-secondary">email：</p>
@@ -27,7 +27,7 @@ const ContactSection = () => {
           >
             <img
               className="contact-icon"
-              src="./Images/Skills/twitter.svg"
+              src="./twitter.svg"
               alt="Twitter"
             />
           </a>
@@ -38,7 +38,7 @@ const ContactSection = () => {
           >
             <img
               className="contact-icon"
-              src="./Images/Skills/github.svg"
+              src="./github.svg"
               alt="GitHub"
             />
           </a>

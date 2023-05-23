@@ -6,4 +6,5 @@ https://minori-takeuchi-portfolio.netlify.app
 
 ## 使用技術（実行環境）  
 React 18.2.0  
-Netlify
+Netlify  
+microCMS  
