@@ -7,7 +7,7 @@ const ProfileSection = () => {
       <div className="profile-section">
         <div className="text-center">
           <h2 className="section-heading display-3 text-secondary">Profile</h2>
-          <h6 className="section-subheading fs-m fw-300 mb-5">私について</h6>
+
         </div>
         <div className="profile-wrap d-flex">
           <div className="profile-img"></div>

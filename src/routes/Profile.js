@@ -21,7 +21,7 @@ const Profile = () => {
           <thead>
             <tr>
               <th>
-                <h2 className="display-5 text-center text-secondary">
+                <h2 className="display-3 text-center text-secondary">
                   Profile
                 </h2>
                 <h3 className="profile-sub-ttl text-center text-secondary fw-300 mb-5">
