@@ -43,7 +43,7 @@ const WorkDetail = () => {
       {/* タイトルとカルーセル */}
       <div className="work-top">
         <div className="text-center work-ttl">
-          <h2 className="section-heading display-3 text-secondary">
+          <h2 className="section-heading display-5 text-secondary">
             {work.title}
           </h2>
           <h6 className="section-subheading fs-m fw-300 mb-5">

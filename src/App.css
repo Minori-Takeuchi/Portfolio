@@ -145,6 +145,10 @@ footer {
   cursor: pointer;
 }
 
+.card-title {
+  font-size: 23px;
+}
+
 .card-text {
   color: #3f3f3f;
 }
@@ -154,6 +158,9 @@ footer {
 
 .card img {
   position: relative;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
 }
 
 .transition {

@@ -38,10 +38,10 @@ const WorksSection = () => {
                   <img
                     className="card-img img-fluid shadow transition"
                     src={work.img[0].url}
-                    alt="Rese -飲食店予約サイト-"
+                    alt={work.title}
                   />
                   <div className="card-body">
-                    <h5 className="card-title display-6 text-muted fw-400">
+                    <h5 className="card-title text-muted fw-400">
                       {work.title}
                     </h5>
                     <p className="card-text">
