@@ -54,6 +54,7 @@ function Skills() {
                     alt={skill.skill_name}
                   />
                   <p className="display-3">{skill.skill_name}</p>
+                  <p className="display-3">{skill.level}</p>
                 </div>
               ))
           ) : (
@@ -61,7 +62,8 @@ function Skills() {
           )}
         </div>
         <p className="fs-s">
-          Laravelをバックエンド、Nuxt.jsをフロントエンドとしたWebアプリケーションの開発を得意としています。
+          Laravelをバックエンド、Vue.jsをフロントエンドとしたWebアプリケーションの開発を得意としています。<br />
+          Laravel Livewireでのフルスタック開発も可能です。
         </p>
 
         <div className="other">

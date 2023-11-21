@@ -269,7 +269,7 @@ footer {
 }
 
 Table tbody tr td p {
-  padding: 0 25px;
+  /* padding: 0 25px; */
   font-size: 20px;
   font-weight: 400;
 }
