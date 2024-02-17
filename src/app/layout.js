@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         ></link>
       </head>
-      <body className={inter.className}>
+      <body className="font-comic text-gray-700">
         <Header></Header>
         {children}
       </body>
