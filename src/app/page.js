@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Title from "../components/Title";
 
 export default function Home() {
   return (
@@ -9,7 +10,30 @@ export default function Home() {
           <h1 className="text-6xl text-gray-500">Takeuchi Minori Portfolio</h1>
         </div>
       </section>
-      <section className="min-h-screen w-full bg-white">profile</section>
+
+      {/* profile */}
+      <section className="min-h-screen w-full bg-white">
+        <Title title="Profile" />
+        profile
+      </section>
+
+      {/* skills */}
+      <section className="min-h-screen w-full bg-white">
+        <Title title="Skills" />
+        skills
+      </section>
+
+      {/* works */}
+      <section className="min-h-screen w-full bg-white">
+        <Title title="Works" />
+        works
+      </section>
+
+      {/* contact */}
+      <section className="min-h-[500px] w-full bg-cyan-100">
+        <Title title="Contact" />
+        contact
+      </section>
     </main>
   );
 }
